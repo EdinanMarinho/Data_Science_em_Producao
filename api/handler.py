@@ -9,7 +9,7 @@ model = pickle.load( open( '/home/dimarinho/repos/Data_Science_em_Producao/model
 # iniciando API
 app = Flask( __name__ )
 
-@app.route( '/rossmann/predict', methods=['POST'] )
+@app.route( '/rossmann/predict', methods=['GET', 'POST'] )
 def rossmann_predict():
     test_json = request.get_json()
 

@@ -8,9 +8,10 @@ import datetime
 class Rossmann( object ):
     def __init__( self ):
         self.home_path='/home/dimarinho/repos/Data_Science_em_Producao/'
-        self.competition_distacen_scaler   = pickle.load( open( self.home_path + 'parameter/competition_distance_scaler.pkl', 'rb' ) ) 
+        self.competition_distance_scaler   = pickle.load( open( self.home_path + 'parameter/competition_distance_scaler.pkl', 'rb' ) ) 
         self.competition_time_week_scaler  = pickle.load( open( self.home_path + 'parameter/competition_time_week_scaler.pkl', 'rb' ) )
         self.competition_time_month_scaler = pickle.load( open( self.home_path + 'parameter/competition_time_month_scaler.pkl', 'rb' ) )
+        self.promo_time_week_scaler        = pickle.load( open( self.home_path + 'parameter/promo_time_week_scaler.pkl', 'rb' ) )
         self.year_scaler                   = pickle.load( open( self.home_path + 'parameter/year_scaler.pkl', 'rb' ) )
         self.store_type_scaler             = pickle.load( open( self.home_path + 'parameter/store_type_scaler.pkl', 'rb' ))
 
@@ -33,15 +34,7 @@ class Rossmann( object ):
         df1['date'] = pd.to_datetime( df1['date'] )
          
         ## 1.5. Fillout NA 
-        # promo_interval      
-        month_map = { 1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec' }
-        
         # fillma substitui os valores da coluna por 0 e o inplace=True, faz a modificacao direto na coluna
-        df1['promo_interval'].fillna(0, inplace=True)
-        
-        df1['month_map'] = df1['date'].dt.month.map( month_map )
-        
-        df1['is_promo'] = df1[['promo_interval', 'month_map']].apply( lambda x: 0 if x['promo_interval'] == 0 else 1 if x['month_map'] in x['promo_interval'].split( ',' ) else 0, axis=1 )
         
         # promo2_since_year 
         df1['promo2_since_year'] = df1.apply( lambda x: x['date'].year if math.isnan( x['promo2_since_year'] ) else x['promo2_since_year'], axis=1)
@@ -57,6 +50,15 @@ class Rossmann( object ):
         
         # competition_distance       
         df1['competition_distance'] = df1['competition_distance'].apply( lambda x: 200000.0 if math.isnan( x ) else x )
+
+        # promo_interval      
+        month_map = { 1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec' }
+        
+        df1['promo_interval'].fillna(0, inplace=True)
+        
+        df1['month_map'] = df1['date'].dt.month.map( month_map )
+        
+        df1['is_promo'] = df1[['promo_interval', 'month_map']].apply( lambda x: 0 if x['promo_interval'] == 0 else 1 if x['month_map'] in x['promo_interval'].split( ',' ) else 0, axis=1 )
         
         ## 1.6. Change Types
         # competition
