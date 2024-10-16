@@ -79,9 +79,13 @@ Dentre as 11 hipóteses, as mais importantes por mim consideradas foram:
 Hipótese FALSA. Lojas com competidores MAIS PRÓXIMOS vendem MAIS
 Insight de negócio: Através dessa análise foi observado que lojas com competidores mais próximos vendem mais. E isso é totalmente contrário ao senso comum, pois com competidores mais próximos é incentivado a competição das vendas e por consequência um compartilhamento de vendas muito maior ocasionando em menos vendas. 
 
+![hipotese_02](https://github.com/user-attachments/assets/a9ab6553-2b1f-4572-9f4e-c8893bb29f66)
+
+
 #### Lojas com promoções ativas por mais tempo deveriam vender mais.
 Hipótese FALSA. Lojas com promoções ATIVAS por mais tempo VENDEM MENOS, depois de um certo período de promoção. 
 Insight de negócio: Foi observado uma tendência de aumento de vendas no período de promoção normal e depois uma queda no período de promoção estendido, com essa informação, uma alternativa seria mudar a regra de negócio para igualar todas as lojas para período promocional normal.
+
 
 #### Lojas devem vender mais no segundo semestre do ano
 Hipótese FALSA: Lojas VENDEM MENOS no SEGUNDO SEMESTRE do ano
