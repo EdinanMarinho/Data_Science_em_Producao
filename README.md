@@ -1,5 +1,9 @@
 # Ciência de Dados em Produção
 
+![Ciência de Dados em Produção - Bot Telegram](https://github.com/user-attachments/assets/e42683b3-01c7-4cf7-8b64-6517a8560aa9)
+
+
+
 
 ## 1. Problema de Negócio
 
