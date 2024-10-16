@@ -4,9 +4,11 @@
 ## 1. Problema de Negócio
 
 A Rossmann é uma rede de drogarias com mais de 3.000 lojas espalhadas por 7 países na Europa. Recentemente, o CFO da empresa solicitou uma previsão das vendas para as próximas seis semanas. 
+
 Essa decisão surgiu após várias discussões estratégicas com os gerentes de loja, que apontaram a necessidade de prever as vendas para auxiliar no planejamento das reformas das lojas. O orçamento dessas reformas está diretamente relacionado ao desempenho de vendas de cada loja. 
 
 As vendas das lojas Rossmann são influenciadas por diversos fatores, como promoções, concorrência, feriados, sazonalidade e localização. 
+
 Como Cientista de Dados, fui encarregado de desenvolver esse projeto de dados com a previsão, utilizando a metodologia CRISP-DS desde o entendimento de negócio até colocar o modelo em produção. 
 Meu objetivo foi gerar previsões das vendas e reportar os resultados ao CFO, utilizando um bot do Telegram. 
 
