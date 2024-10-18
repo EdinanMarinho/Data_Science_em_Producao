@@ -111,10 +111,10 @@ Após analisar os erros (MAE, MAPE e RMSE) abaixo, escolhi prosseguir com o XGBo
  
 | Nome Algoritmo               |     MAE       |  MAPE    |   RMSE        |
 | -------------                | ------------- | -------- | ------------  |
-| Random Forest Regressor	     | 711.298991    | 0.105949 | 1043.778751   |
-| XGBoost Regressor            | 791.601905    | 0.117393 | 1142.011747   |
+| Random Forest Regressor	     | 686.136389    | 0.100823 | 1020.987478   |
+| XGBoost Regressor            | 795.975380    | 0.116855 | 1168.426890   |
 | Average Model                | 1354.800353   | 0.206400 | 1835.135542   |
-| Linear Regression            | 1868.255048   | 0.292406 | 2674.402343   |
+| Linear Regression            | 1867.089774   | 0.292694 | 2671.049215   |
 | Linear Regression - Lasso    | 1869.571858   | 0.288111 | 2694.005137   |
 
 
@@ -122,30 +122,30 @@ Após realizar a Cross-Validation, podemos notar na tabela a seguir que os erros
 
 | Nome Algoritmo               |     MAE CV         |  MAPE CV      |   RMSE CV          |
 | -------------                | -------------      | --------      | ------------       | 
-| Random Forest Regressor	     | 848.28 +/- 230.62  | 0.12 +/- 0.02 | 1270.2 +/- 337.26  |
-| XGBoost Regressor            | 994.87 +/- 164.2   | 0.14 +/- 0.02 | 1417.86 +/- 235.37 |
-| Linear Regression            | 2080.51 +/- 292.95 | 0.3 +/- 0.02  | 2950.33 +/- 464.0  |
-| Linear Regression - Lasso    | 2088.84 +/- 327.02 | 0.3 +/- 0.01  | 2988.55 +/- 499.58 |
+| Random Forest Regressor	     | 836.68 +/- 213.7   | 0.12 +/- 0.02 | 1257.07 +/- 314.95 |
+| XGBoost Regressor            | 966.6 +/- 161.17   | 0.14 +/- 0.02 | 1380.66 +/- 224.97 |
+| Linear Regression            | 2081.73 +/- 295.63 | 0.3 +/- 0.02  | 2952.52 +/- 468.37 |
+| Linear Regression - Lasso    | 2088.88 +/- 327.01 | 0.3 +/- 0.01  | 2988.6 +/- 499.57 |
  
 
 Por fim, o modelo final, após o ajuste dos hiperparâmetros, ficou da seguinte forma:
 
 | Nome Algoritmo      |     MAE     |  MAPE    |    RMSE     |
 | -------------       | ----------- | -------- | ----------- | 
-| XGBoost Regressor	  | 722.892534  | 0.107472 | 1047.989691 |
+| XGBoost Regressor	  | 700.367377  | 0.103244 | 1021.266523 |
 
  
-Assim, a cada predição para 6 semanas, o modelo erra em torno de 723 por dia ( + ou / 11%).
+Assim, a cada predição para 6 semanas, o modelo erra em torno de 700 por dia ( + ou / 10%).
 
 ### 6. Interpretação & Tradução do Erro para Resultado de Negócio
 
 Com as previsões feitas pelo modelo, podemos transformar os erros em estimativas para o negócio. A tabela abaixo mostra as previsões do modelo considerando o melhor e o pior cenário financeiro.
 
 | Cenário         |   $ Valor        | 
-| -------------   | -----------      | 
-| Predição	      | $ 288,158,720.00 | 
-| Pior Cenário    | $ 287,349,112.66 |
-| Melhor Cenário  | $ 288,968,388.94 |
+| -------------   |    -----------   | 
+| Predição	       | $ 285,403,424.00 | 
+| Pior Cenário    | $ 284,618,690.79 |
+| Melhor Cenário  | $ 286,188,129.73 |
 
 
 ### 7. Resultados para o Negócio
