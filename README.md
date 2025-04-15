@@ -3,8 +3,6 @@
 ![Ciência de Dados em Produção - Bot Telegram](https://github.com/user-attachments/assets/e42683b3-01c7-4cf7-8b64-6517a8560aa9)
 
 
-
-
 ## 1. Problema de Negócio
 
 A Rossmann é uma rede de drogarias com mais de 3.000 lojas espalhadas por 7 países na Europa. Recentemente, o CFO da empresa solicitou uma previsão das vendas para as próximas seis semanas. 
